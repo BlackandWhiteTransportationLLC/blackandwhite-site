@@ -12,33 +12,26 @@
       padding: 0;
       line-height: 1.6;
     }
-    .banner-container {
+    .banner {
       position: relative;
       width: 100%;
-    }
-    .banner-container img {
-      width: 100%;
       height: auto;
-      display: block;
     }
     .coming-soon {
       position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+      top: 20%;
+      width: 100%;
+      text-align: center;
       font-size: 2rem;
       font-weight: bold;
       color: white;
       text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
-      text-align: center;
     }
-    header {
+    .logo-container {
       text-align: center;
-      background: #fff;
-      padding: 20px 10px;
+      margin: 20px 0;
     }
-    header img {
-      width: 300px;
+    .logo-container img {
       max-width: 90%;
       height: auto;
     }
@@ -52,25 +45,56 @@
       color: white;
       padding: 14px 20px;
       text-decoration: none;
-      flex-grow: 1;
       text-align: center;
+      flex-grow: 1;
       min-width: 100px;
     }
     nav a:hover {
       background-color: #444;
     }
+    section {
+      padding: 20px;
+    }
+    h2 {
+      border-bottom: 2px solid black;
+      padding-bottom: 5px;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      max-width: 400px;
+    }
+    form input, form textarea {
+      margin-bottom: 10px;
+      padding: 10px;
+      font-size: 1rem;
+    }
+    form button {
+      padding: 10px;
+      background: black;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    form button:hover {
+      background: #333;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+    }
   </style>
 </head>
 <body>
 
-  <div class="banner-container">
-    <img src="IMG_6324.jpeg" alt="Bay View Banner"/>
+  <div>
+    <img src="IMG_6324.jpeg" alt="Baldwin County Bay View" class="banner"/>
     <div class="coming-soon">Coming Soon – Fall 2025</div>
   </div>
 
-  <header>
-    <img src="official_logo.PNG" alt="Black and White Transportation LLC Logo"/>
-  </header>
+  <div class="logo-container">
+    <img src="official_logo.PNG" alt="Black and White Transportation LLC Logo" />
+  </div>
 
   <nav>
     <a href="#about">About Us</a>
@@ -79,6 +103,53 @@
     <a href="#careers">Careers</a>
     <a href="#contact">Contact</a>
   </nav>
+
+  <section id="about">
+    <h2>About Us</h2>
+    <p>Black and White Transportation LLC will offer local and regional logistics solutions across the Southeastern U.S. using a compliance-based fleet structured for non-CDL operations. Our services are designed to support short- and mid-range transportation needs, including freight, delivery, and towing — all within DOT regulatory limits.</p>
+  </section>
+
+  <section id="why">
+    <h2>Why Choose Us</h2>
+    <p><strong>Built by professionals, for professionals.</strong> With a combined 40 years of experience in logistics, warehousing, and transportation, we’ve built Black and White Transportation because we understand the grind — because we've lived it. We’re committed to building a company that respects hard work, understands and values fair pay, and delivers a top-tier service from the inside out.</p>
+  </section>
+
+  <section id="services">
+    <h2>Services</h2>
+    <p>Local and regional transport solutions including box trucks and dually/gooseneck trailer setups, while serving DOT compliance for non-CDL operations providing diverse logistics needs.</p>
+  </section>
+
+  <section id="quote">
+    <h2>Request a Quote</h2>
+    <form name="quote" method="POST" data-netlify="true">
+      <input type="hidden" name="form-name" value="quote" />
+      <input type="text" name="name" placeholder="Name" required />
+      <input type="text" name="company" placeholder="Company (if applicable)" />
+      <input type="email" name="email" placeholder="Email" required />
+      <textarea name="message" placeholder="Describe the services you need" required></textarea>
+      <button type="submit">Request a Quote</button>
+    </form>
+  </section>
+
+  <section id="careers">
+    <h2>Careers</h2>
+    <p>If you believe in fair pay, hard work, and being appreciated — we want to hear from you. We're not officially hiring yet, but we’re open to connecting with dependable individuals interested in future opportunities. Please submit your contact details and background below.</p>
+    <form name="careers" method="POST" data-netlify="true">
+      <input type="hidden" name="form-name" value="careers" />
+      <input type="text" name="name" placeholder="Name" required />
+      <input type="email" name="email" placeholder="Email" required />
+      <textarea name="background" placeholder="Tell us a little about your experience and goals"></textarea>
+      <button type="submit">Submit Interest</button>
+    </form>
+  </section>
+
+  <footer id="contact">
+    <p>Contact us at <a href="mailto:blackandwhitetransport@outlook.com">blackandwhitetransport@outlook.com</a></p>
+    <p>Follow us:
+      <a href="https://www.facebook.com/BlackandWhiteTransportationLLC" target="_blank">Facebook</a> |
+      <a href="https://www.instagram.com/blackandwhitetransportationllc" target="_blank">Instagram</a>
+    </p>
+  </footer>
 
 </body>
 </html>
