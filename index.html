@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -62,7 +61,7 @@
       flex-direction: column;
       max-width: 400px;
     }
-    form input, form textarea, form select {
+    form input, form textarea {
       margin-bottom: 10px;
       padding: 10px;
       font-size: 1rem;
@@ -91,7 +90,12 @@
   </div>
 
   <header>
-    <h1>Black and White Transportation</h1>
+    <h1 style="font-size: 2em; font-weight: bold; color: black; margin-bottom: 0.2em; text-align: center;">
+      Black and White Transportation
+    </h1>
+    <p style="font-size: 1em; color: black; text-align: center; margin-top: 0;">
+      Driven by purpose. Built for the long haul.
+    </p>
   </header>
 
   <nav>
@@ -104,12 +108,12 @@
 
   <section id="about">
     <h2>About Us</h2>
-    <p>Black and White Transportation LLC will offer local and regional logistics solutions across the Southeastern U.S. using a compliance-based fleet structured for non-CDL operations. Our services are designed to support short- and mid-range transport needs, including freight, delivery, and towing — all within DOT regulatory limits.</p>
+    <p>Black and White Transportation LLC will offer local and regional logistics solutions across the Southeastern U.S. using a compliance-based fleet structured for non-CDL operations. Our services are designed to support short- and mid-range transportation needs, including freight, delivery, and towing — all within DOT regulatory limits.</p>
   </section>
 
   <section id="why">
     <h2>Why Choose Us</h2>
-    <p><strong>Built by professionals, for professionals.</strong> With a combined 40 years experience in the logistics, warehousing, and transportation industry, we’ve built Black and White Transportation because we understand the grind — because we've lived it. We’re committed to building a company that respects hard work, values fair pay, and delivers top-tier service from the inside out.</p>
+    <p><strong>Built by professionals, for professionals.</strong> With a combined 40 years experience in the logistics, warehousing, and transportation industry, we’ve built Black and White Transportation because we understand the grind — because we've lived it. We’re committed to building a company that respects hard work, understands and values fair pay, and delivers a top-tier service from the inside out.</p>
   </section>
 
   <section id="services">
@@ -119,7 +123,8 @@
 
   <section id="quote">
     <h2>Request a Quote</h2>
-    <form>
+    <form name="quote" method="POST" data-netlify="true">
+      <input type="hidden" name="form-name" value="quote" />
       <input type="text" name="name" placeholder="Name" required />
       <input type="text" name="company" placeholder="Company (if applicable)" />
       <input type="email" name="email" placeholder="Email" required />
@@ -131,7 +136,8 @@
   <section id="careers">
     <h2>Careers</h2>
     <p>If you believe in fair pay, hard work, and being appreciated — we want to hear from you. We're not officially hiring yet, but we’re open to connecting with dependable individuals interested in future opportunities. Please submit your contact details and background below.</p>
-    <form>
+    <form name="careers" method="POST" data-netlify="true">
+      <input type="hidden" name="form-name" value="careers" />
       <input type="text" name="name" placeholder="Name" required />
       <input type="email" name="email" placeholder="Email" required />
       <textarea name="background" placeholder="Tell us a little about your experience and goals"></textarea>
