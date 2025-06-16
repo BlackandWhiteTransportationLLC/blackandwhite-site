@@ -11,27 +11,14 @@
       margin: 0;
       padding: 0;
       line-height: 1.6;
+      overflow-x: hidden;
     }
-    header, footer {
+    header {
+      background: #fff;
+      color: #000;
       text-align: center;
-      padding: 20px;
-    }
-    .banner {
-      position: relative;
-    }
-    .banner img {
-      width: 100%;
-      height: auto;
-    }
-    .coming-soon {
-      position: absolute;
-      top: 40%;
-      width: 100%;
-      text-align: center;
-      font-size: 2rem;
-      font-weight: bold;
-      color: white;
-      text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+      padding: 10px 20px;
+      border-bottom: 2px solid #000;
     }
     nav {
       display: flex;
@@ -50,6 +37,28 @@
     nav a:hover {
       background-color: #444;
     }
+    .banner-container img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .coming-soon {
+      position: absolute;
+      top: 120px;
+      width: 100%;
+      text-align: center;
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: white;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+    }
+    .logo-banner {
+      display: block;
+      margin: 0 auto;
+      max-width: 100%;
+      height: auto;
+      padding-top: 20px;
+    }
     section {
       padding: 20px;
     }
@@ -62,7 +71,7 @@
       flex-direction: column;
       max-width: 400px;
     }
-    form input, form textarea {
+    form input, form textarea, form select {
       margin-bottom: 10px;
       padding: 10px;
       font-size: 1rem;
@@ -77,21 +86,20 @@
     form button:hover {
       background: #333;
     }
-    .logo {
-      display: block;
-      max-width: 500px;
-      margin: 40px auto 10px;
+    footer {
+      text-align: center;
+      padding: 20px;
     }
   </style>
 </head>
 <body>
 
-  <div class="banner">
-    <img src="IMG_6324.jpeg" alt="Baldwin County Bay View" />
+  <div class="banner-container">
+    <img src="IMG_6324.jpeg" alt="Baldwin County Banner" />
     <div class="coming-soon">Coming Soon – Fall 2025</div>
   </div>
 
-  <img src="official_logo.PNG" alt="Black and White Transportation LLC Logo" class="logo" />
+  <img src="official_logo.PNG" alt="Black and White Transportation LLC Logo" class="logo-banner"/>
 
   <nav>
     <a href="#about">About Us</a>
@@ -108,7 +116,7 @@
 
   <section id="why">
     <h2>Why Choose Us</h2>
-    <p><strong>Built by professionals, for professionals.</strong> With a combined 40 years experience in the logistics, warehousing, and transportation industry, we’ve built Black and White Transportation because we understand the grind — because we've lived it. We’re committed to building a company that respects hard work, understands and values fair pay, and delivers top-tier service from the inside out.</p>
+    <p><strong>Built by professionals, for professionals.</strong> With a combined 40 years experience in the logistics, warehousing, and transportation industry, we’ve built Black and White Transportation because we understand the grind — because we've lived it. We’re committed to building a company that respects hard work, understands and values fair pay, and delivers a top-tier service from the inside out.</p>
   </section>
 
   <section id="services">
@@ -142,8 +150,8 @@
 
   <footer id="contact">
     <p>Contact us at <a href="mailto:blackandwhitetransport@outlook.com">blackandwhitetransport@outlook.com</a></p>
-    <p>Follow us:
-      <a href="https://www.facebook.com/BlackandWhiteTransportationLLC" target="_blank">Facebook</a> |
+    <p>Follow us: 
+      <a href="https://www.facebook.com/BlackandWhiteTransportationLLC" target="_blank">Facebook</a> | 
       <a href="https://www.instagram.com/blackandwhitetransportationllc" target="_blank">Instagram</a>
     </p>
   </footer>
