@@ -1,79 +1,160 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Black & White Transportation LLC</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Black and White Transportation</title>
     <style>
         body {
-            margin: 0;
             font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
             color: #000;
-            background: url('IMG_6324.jpeg') no-repeat center center fixed;
-            background-size: cover;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: flex-start;
-            text-align: center;
-            min-height: 100vh;
+        }
+        header {
+            background-color: #000;
+            color: #fff;
             padding: 20px;
-        }
-
-        .overlay {
-            background-color: rgba(255, 255, 255, 0.85);
-            padding: 20px 30px;
-            border-radius: 10px;
-            max-width: 800px;
-            margin-top: 20px;
-        }
-
-        h1, h2 {
-            margin: 0.5em 0;
-        }
-
-        p {
-            font-size: 1.1em;
-            line-height: 1.6em;
-        }
-
-        .contact {
-            margin-top: 20px;
+            text-align: center;
+            font-size: 28px;
             font-weight: bold;
         }
-
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 1.8em;
-            }
-
-            h2 {
-                font-size: 1.2em;
-            }
-
-            p {
-                font-size: 1em;
-                line-height: 1.5em;
-            }
-
-            .overlay {
-                padding: 15px 20px;
-                max-width: 90%;
-            }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #222;
+        }
+        nav a {
+            color: #fff;
+            padding: 14px 20px;
+            display: inline-block;
+            text-decoration: none;
+        }
+        nav a:hover {
+            background-color: #444;
+        }
+        section {
+            padding: 40px 20px;
+            max-width: 900px;
+            margin: auto;
+        }
+        h2 {
+            border-bottom: 2px solid #000;
+            padding-bottom: 10px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label, input, textarea, select {
+            margin: 10px 0;
+        }
+        input, textarea, select {
+            padding: 8px;
+            font-size: 16px;
+        }
+        button {
+            padding: 10px;
+            font-size: 16px;
+            background-color: #000;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #333;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #eee;
+        }
+        .socials img {
+            height: 24px;
+            margin: 0 10px;
+            vertical-align: middle;
+        }
+        strong {
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
-    <div>
-        <h2>COMING SOON</h2>
-        <h1>BLACK & WHITE<br>TRANSPORTATION LLC</h1>
-        <h2>Driven by Purpose. Built for the Long Haul.</h2>
-    </div>
-    <div class="overlay">
-        <p><strong>Mission:</strong> To deliver friendly and professional freight services built on trust and community impact across the Southeast.</p>
-        <p><strong>About:</strong> Black and White Transportation LLC is a minority-owned logistics company based in Baldwin County, AL, currently finalizing certifications, fleet acquisition, and DOT compliance to launch soon.</p>
-        <p class="contact">Contact us: <strong>BlackandWhiteTransport@outlook.com</strong></p>
-    </div>
+    <header>Black and White Transportation</header>
+    <nav>
+        <a href="#about">About Us</a>
+        <a href="#services">Services</a>
+        <a href="#quote">Request a Quote</a>
+        <a href="#careers">Careers</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section id="why">
+        <h2>Why Choose Us</h2>
+        <p><strong>Built by professionals, for professionals.</strong> With over two decades of combined experience in logistics, warehousing, and transportation, Black and White Transportation understands the grind — because we've lived it. We’re committed to building a company that respects hard work, values fair pay, and delivers top-tier service from the inside out.</p>
+    </section>
+
+    <section id="about">
+        <h2>About Us</h2>
+        <p>Black and White Transportation LLC is a minority-owned logistics company based in Gulf Coast Alabama, dedicated to delivering non-CDL compliant freight and towing solutions throughout the Southeastern U.S. We are driven by purpose and built for the long haul — creating a company founded on experience, trust, and community values. We believe in empowering workers, honoring hard work, and setting a new standard in local and regional transportation services.</p>
+    </section>
+
+    <section id="services">
+        <h2>Services</h2>
+        <p>We will offer local and regional logistics solutions across the Southeastern U.S. using a compliance-based fleet structured for <strong>non-CDL operations</strong>. Our services are designed to support short- and mid-range transport needs, including <strong>freight, delivery, and towing</strong> — all within <strong>DOT regulatory limits</strong>.</p>
+    </section>
+
+    <section id="quote">
+        <h2>Request a Quote</h2>
+        <form name="quote" method="POST" data-netlify="true">
+            <input type="hidden" name="form-name" value="quote" />
+            <label>Name:</label>
+            <input type="text" name="name" required />
+            <label>Company:</label>
+            <input type="text" name="company" />
+            <label>Email:</label>
+            <input type="email" name="email" required />
+            <label>Phone Number:</label>
+            <input type="text" name="phone" />
+            <label>Service Details:</label>
+            <textarea name="details" placeholder="Let us know what you need..." rows="5" required></textarea>
+            <button type="submit">Submit Quote Request</button>
+        </form>
+    </section>
+
+    <section id="careers">
+        <h2>Careers</h2>
+        <p>We’re not currently hiring, but we’re always looking to connect with <strong>dependable individuals</strong> who believe in getting paid fairly and want to be part of something meaningful. If you’re interested in future opportunities, we’d love to hear from you.</p>
+        <form name="careers" method="POST" data-netlify="true">
+            <input type="hidden" name="form-name" value="careers" />
+            <label>Name:</label>
+            <input type="text" name="name" required />
+            <label>Email:</label>
+            <input type="email" name="email" required />
+            <label>Phone Number:</label>
+            <input type="text" name="phone" />
+            <label>Tell us about yourself:</label>
+            <textarea name="intro" rows="5" required></textarea>
+            <button type="submit">Submit Interest</button>
+        </form>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:blackandwhitetransport@outlook.com">blackandwhitetransport@outlook.com</a></p>
+        <div class="socials">
+            <a href="https://www.instagram.com/blackandwhitetransportationllc" target="_blank">
+                <img src="https://img.icons8.com/ios-filled/50/000000/instagram-new.png" alt="Instagram">
+            </a>
+            <a href="https://www.facebook.com/blackandwhitetransportationllc" target="_blank">
+                <img src="https://img.icons8.com/ios-filled/50/000000/facebook-new.png" alt="Facebook">
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        &copy; 2025 Black and White Transportation LLC | Last updated: June 16, 2025
+    </footer>
 </body>
 </html>
