@@ -16,8 +16,12 @@
       background: #fff;
       color: #000;
       text-align: center;
-      padding: 10px 20px;
+      padding: 0;
       border-bottom: 2px solid #000;
+    }
+    .logo-banner {
+      width: 100%;
+      height: auto;
     }
     nav {
       display: flex;
@@ -36,20 +40,6 @@
     nav a:hover {
       background-color: #444;
     }
-    .banner {
-      width: 100%;
-      height: auto;
-    }
-    .coming-soon {
-      position: absolute;
-      top: 120px;
-      width: 100%;
-      text-align: center;
-      font-size: 1.5rem;
-      font-weight: bold;
-      color: white;
-      text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
-    }
     section {
       padding: 20px;
     }
@@ -62,7 +52,7 @@
       flex-direction: column;
       max-width: 400px;
     }
-    form input, form textarea {
+    form input, form textarea, form select {
       margin-bottom: 10px;
       padding: 10px;
       font-size: 1rem;
@@ -85,18 +75,8 @@
 </head>
 <body>
 
-  <div>
-    <img src="IMG_6324.jpeg" alt="Baldwin County Bay View" class="banner"/>
-    <div class="coming-soon">Coming Soon – Fall 2025</div>
-  </div>
-
   <header>
-    <h1 style="font-size: 2em; font-weight: bold; color: black; margin-bottom: 0.2em; text-align: center;">
-      Black and White Transportation
-    </h1>
-    <p style="font-size: 1em; color: black; text-align: center; margin-top: 0;">
-      Driven by purpose. Built for the long haul.
-    </p>
+    <img src="official_logo.png" alt="Black and White Transportation LLC Logo" class="logo-banner"/>
   </header>
 
   <nav>
@@ -114,7 +94,7 @@
 
   <section id="why">
     <h2>Why Choose Us</h2>
-    <p><strong>Built by professionals, for professionals.</strong> With a combined 40 years of experience in the logistics, warehousing, and transportation industry, we’ve built Black and White Transportation because we understand the grind — because we've lived it. We’re committed to building a company that respects hard work, understands and values fair pay, and delivers a top-tier service from the inside out.</p>
+    <p><strong>Built by professionals, for professionals.</strong> With a combined 40 years experience in the logistics, warehousing, and transportation industry, we’ve built Black and White Transportation because we understand the grind — because we've lived it. We’re committed to building a company that respects hard work, understands and values fair pay, and delivers a top-tier service from the inside out.</p>
   </section>
 
   <section id="services">
@@ -124,8 +104,7 @@
 
   <section id="quote">
     <h2>Request a Quote</h2>
-    <form name="quote" method="POST" data-netlify="true" netlify>
-      <input type="hidden" name="form-name" value="quote" />
+    <form name="quote" method="POST" data-netlify="true">
       <input type="text" name="name" placeholder="Name" required />
       <input type="text" name="company" placeholder="Company (if applicable)" />
       <input type="email" name="email" placeholder="Email" required />
@@ -137,8 +116,7 @@
   <section id="careers">
     <h2>Careers</h2>
     <p>If you believe in fair pay, hard work, and being appreciated — we want to hear from you. We're not officially hiring yet, but we’re open to connecting with dependable individuals interested in future opportunities. Please submit your contact details and background below.</p>
-    <form name="careers" method="POST" data-netlify="true" netlify>
-      <input type="hidden" name="form-name" value="careers" />
+    <form name="careers" method="POST" data-netlify="true">
       <input type="text" name="name" placeholder="Name" required />
       <input type="email" name="email" placeholder="Email" required />
       <textarea name="background" placeholder="Tell us a little about your experience and goals"></textarea>
